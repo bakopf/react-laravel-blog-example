@@ -26,9 +26,11 @@ const PostList = () => {
         <Link key={post.id} to={`/posts/${post.id}`} className="text-decoration-none text-dark">
           <div className="card mb-5 shadow">
             <div className="row g-0">
-              <div className="col-md-4">
-                <img src={`http://127.0.0.1:8000/storage/${post.filepath}`} className="img-fluid rounded-start" alt={post.headline} />
-              </div>
+            {post.filepath && (
+                <div className="col-md-4">
+                  <img src={`http://127.0.0.1:8000/storage/${post.filepath}`} className="img-fluid rounded-start" alt={post.headline} />
+                </div>
+              )}
               <div className="col-md-8">
                 <div className="card-body">
                   <h2 className="card-title">{post.headline}</h2>
