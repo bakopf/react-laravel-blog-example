@@ -25,6 +25,7 @@ const PostDetail = () => {
       {post ? (
         <div>
           <h1>{post.headline}</h1>
+          <img src={`http://127.0.0.1:8000/storage/${post.filepath}`} className="img-fluid rounded-start" alt={post.headline} />
           <p>{post.text}</p>
           <p><strong>Author:</strong> {post.author}</p>
           <p><strong>Publish Date:</strong> {post.publish_date}</p>

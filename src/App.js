@@ -2,7 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar'; // Import the Navbar component
+import './App.css';
+import NavbarComponent from './components/Navbar'; 
 import PostList from './components/PostList';
 import PostDetail from './components/PostDetail';
 import AddPost from './components/AddPost';
@@ -11,7 +12,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar /> {/* Include the Navbar component */}
+        <NavbarComponent />
         <div className="container mt-5">
           <Routes>
             <Route path="/" element={<PostList />} />
